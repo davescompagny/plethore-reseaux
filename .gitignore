@@ -45,3 +45,6 @@ next-env.d.ts
 
 # old pre-migration HTML exports, kept locally for reference only
 /legacy/other-versions/
+
+# generated offline snapshot for local double-click viewing (not source code)
+/version-partage/
