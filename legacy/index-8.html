@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pléthore Réseaux — Ateliers barber pour salons de coiffure</title>
+  <meta name="description" content="Pléthore Réseaux aide les salons de coiffure indépendants à capter la demande barber moderne grâce au diagnostic salon, au bootcamp découverte 1 jour, au bootcamp intensif 3 jours et aux options de suivi.">
+  <style>
+    :root {
+      --bg: #f7f5ef;
+      --ink: #121212;
+      --muted: #5f625c;
+      --line: #ded8ca;
+      --surface: #fffdf8;
+      --surface-strong: #ece4d3;
+      --green: #153f35;
+      --green-soft: #e3eee9;
+      --bronze: #9b6b35;
+      --bronze-soft: #f0dfc8;
+      --note-ink: #614520;
+      --black: #0c0d0c;
+      --band: #0c0d0c;
+      --band-card: #151715;
+      --header-bg: rgba(247, 245, 239, .9);
+      --radius: 8px;
+      --shadow: 0 18px 45px rgba(12, 13, 12, .12);
+      --max: 1160px;
+    }
+    [data-theme="dark"] {
+      --bg: #111310;
+      --ink: #edeae2;
+      --muted: #a6a99f;
+      --line: #2a2d27;
+      --surface: #181a17;
+      --surface-strong: #1e211c;
+      --green-soft: #17281f;
+      --bronze-soft: #2b2115;
+      --note-ink: #dcb987;
+      --band: #0a0b0a;
+      --band-card: #141613;
+      --header-bg: rgba(17, 19, 16, .88);
+      --shadow: 0 18px 45px rgba(0, 0, 0, .4);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+      transition: background .25s ease, color .25s ease;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, summary:focus-visible, button:focus-visible {
+      outline: 3px solid var(--bronze);
+      outline-offset: 2px;
+      border-radius: var(--radius);
+    }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+    section { padding: 86px 0; scroll-margin-top: 82px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { line-height: 1.05; letter-spacing: -.02em; }
+    h1 { font-size: clamp(2.45rem, 6vw, 5.25rem); max-width: 860px; margin-bottom: 22px; }
+    h2 { font-size: clamp(2rem, 4vw, 3.35rem); margin-bottom: 18px; }
+    h3 { font-size: 1.25rem; margin-bottom: 10px; }
+    p { color: var(--muted); }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--green);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: .74rem;
+      letter-spacing: .11em;
+      margin-bottom: 18px;
+    }
+    [data-theme="dark"] .eyebrow { color: #7fb3a3; }
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 2px;
+      background: var(--bronze);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--header-bg);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 900;
+      letter-spacing: -.02em;
+      white-space: nowrap;
+      margin-right: auto;
+    }
+    .mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: var(--green);
+      color: #fff;
+      font-weight: 900;
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--ink);
+      font-size: .94rem;
+      font-weight: 700;
+    }
+    .links a { padding: 10px 12px; border-radius: var(--radius); opacity: .82; }
+    .links a:hover { background: var(--green-soft); color: var(--green); opacity: 1; }
+    [data-theme="dark"] .links a:hover { color: #9fd0bf; }
+
+    .theme-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      cursor: pointer;
+      transition: background .2s ease;
+      flex: none;
+    }
+    .theme-toggle:hover { background: var(--green-soft); color: var(--green); }
+    [data-theme="dark"] .theme-toggle:hover { color: #9fd0bf; }
+    .theme-toggle svg { width: 19px; height: 19px; }
+    .theme-toggle .icon-moon { display: block; }
+    .theme-toggle .icon-sun { display: none; }
+    [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+    [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+
+    .nav-cta {
+      background: var(--black);
+      color: #fff;
+      padding: 11px 16px;
+      border-radius: var(--radius);
+      font-size: .93rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    [data-theme="dark"] .nav-cta { background: var(--bronze); }
+    .nav-cta:hover { background: var(--green); color: #fff; }
+
+    .profile-menu { position: relative; }
+    .profile-menu summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 10px 14px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      font-size: .94rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .profile-menu summary::-webkit-details-marker { display: none; }
+    .profile-menu summary:hover,
+    .profile-menu[open] summary {
+      background: var(--green-soft);
+      color: var(--green);
+    }
+    [data-theme="dark"] .profile-menu summary:hover,
+    [data-theme="dark"] .profile-menu[open] summary { color: #9fd0bf; }
+    .profile-menu-list {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 10px);
+      width: min(360px, 86vw);
+      display: grid;
+      gap: 6px;
+      padding: 10px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      z-index: 30;
+    }
+    .profile-menu-list a {
+      display: block;
+      padding: 12px;
+      border-radius: 6px;
+      white-space: normal;
+      font-weight: 700;
+      font-size: .95rem;
+    }
+    .profile-menu-list a:hover { background: var(--green-soft); color: var(--green); }
+    [data-theme="dark"] .profile-menu-list a:hover { color: #9fd0bf; }
+
+    .hero {
+      padding: 96px 0 70px;
+      background:
+        linear-gradient(110deg, rgba(21,63,53,.93), rgba(12,13,12,.86)),
+        radial-gradient(circle at 80% 20%, rgba(155,107,53,.38), transparent 32%);
+      color: #fff;
+    }
+    [data-theme="dark"] .hero {
+      background:
+        linear-gradient(110deg, rgba(15,45,38,.96), rgba(8,9,8,.92)),
+        radial-gradient(circle at 80% 20%, rgba(155,107,53,.30), transparent 32%);
+    }
+    .hero .eyebrow { color: #cde4da; }
+    .hero p { color: rgba(255,255,255,.78); }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 46px;
+      align-items: center;
+    }
+    .hero-card {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    .hero-stats {
+      display: grid;
+      gap: 12px;
+    }
+    .hero-stat {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 8px;
+      padding: 16px 18px;
+    }
+    .hero-stat strong { display: block; font-size: 1rem; margin-bottom: 2px; }
+    .hero-stat span { color: rgba(255,255,255,.72); font-size: .85rem; }
+    .lead {
+      font-size: 1.18rem;
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 18px;
+      border-radius: var(--radius);
+      font-weight: 850;
+      border: 1px solid transparent;
+    }
+    .btn-primary { background: var(--bronze); color: #fff; }
+    .btn-primary:hover { background: #84582b; }
+    .btn-light { background: #fff; color: var(--black); }
+    .btn-light:hover { background: var(--bronze-soft); }
+    [data-theme="dark"] .btn-light:hover { background: #e6dfd2; color: var(--black); }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 44px;
+      align-items: end;
+      margin-bottom: 36px;
+    }
+    .section-head p { font-size: 1.05rem; }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .card strong { color: var(--ink); }
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+      display: grid;
+      gap: 10px;
+      color: var(--muted);
+    }
+    .card li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+      margin-right: 8px;
+    }
+    [data-theme="dark"] .card li::before { color: #7fb3a3; }
+    .offer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 320px;
+    }
+    .offer .btn { width: 100%; }
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-size: .78rem;
+      font-weight: 850;
+      margin-bottom: 16px;
+    }
+    [data-theme="dark"] .tag { color: #9fd0bf; }
+
+    .dark-band {
+      background: var(--band);
+      color: #fff;
+    }
+    .dark-band .eyebrow { color: #cde4da; }
+    .dark-band p { color: rgba(255,255,255,.72); }
+    .dark-band .card {
+      background: var(--band-card);
+      border-color: rgba(255,255,255,.12);
+    }
+    .dark-band .card li::before { color: var(--bronze); }
+    .dark-band .tag { background: rgba(155,107,53,.2); color: #e0bd8d; }
+
+    .profils-head {
+      max-width: 720px;
+      margin: 0 auto 44px;
+      text-align: center;
+    }
+    .profils-head .eyebrow { justify-content: center; }
+    .profils-head h2 { margin-left: auto; margin-right: auto; }
+    .profils-head p { font-size: 1.05rem; margin-bottom: 0; }
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .audience-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 22px;
+      min-height: 210px;
+      scroll-margin-top: 100px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 30px 28px;
+      box-shadow: 0 2px 10px rgba(12, 13, 12, .04);
+      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .audience-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--bronze);
+      box-shadow: 0 14px 32px rgba(12, 13, 12, .10);
+    }
+    [data-theme="dark"] .audience-card { box-shadow: none; }
+    [data-theme="dark"] .audience-card:hover { box-shadow: 0 14px 32px rgba(0, 0, 0, .35); }
+    .audience-card h3 { font-size: 1.32rem; }
+    .audience-card p { margin-bottom: 0; }
+    .audience-card .go {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--bronze);
+      font-weight: 900;
+      font-size: .95rem;
+    }
+    .audience-card .go::after {
+      content: "→";
+      transition: transform .2s ease;
+    }
+    .audience-card:hover .go::after { transform: translateX(4px); }
+
+    .process {
+      counter-reset: step;
+      display: grid;
+      gap: 14px;
+    }
+    .step {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 20px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .step::before {
+      content: counter(step);
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: var(--green);
+      color: #fff;
+      font-weight: 900;
+    }
+    .step p { margin-bottom: 0; }
+
+    .contact {
+      background: var(--green);
+      color: #fff;
+    }
+    .contact .eyebrow { color: #cde4da; }
+    .contact p { color: rgba(255,255,255,.76); }
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: center;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 10px;
+      padding: 32px;
+    }
+    .contact-list { display: grid; gap: 12px; }
+    .contact-list a, .contact-list span {
+      display: block;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-weight: 800;
+    }
+    .contact-list a:hover { background: rgba(255,255,255,.18); }
+    .contact-list .btn-primary { background: var(--bronze); border-color: transparent; text-align: center; }
+    .contact-list .btn-primary:hover { background: #84582b; }
+
+    .back-to-top {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 25;
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--green);
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: opacity .25s ease, transform .25s ease, visibility .25s ease, background .2s ease;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .back-to-top:hover { background: var(--green-soft); }
+    [data-theme="dark"] .back-to-top { color: #9fd0bf; }
+    .back-to-top svg { width: 20px; height: 20px; }
+    footer {
+      padding: 28px 0;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: .94rem;
+    }
+    .legal-note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--bronze);
+      background: var(--bronze-soft);
+      color: var(--note-ink);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: .95rem;
+    }
+    .dark-band .legal-note {
+      background: rgba(155,107,53,.16);
+      color: #e0c49b;
+    }
+
+    @media (max-width: 980px) {
+      .grid-3 { grid-template-columns: 1fr 1fr; }
+      .offer { min-height: 0; }
+    }
+    @media (max-width: 900px) {
+      .hero-grid, .section-head, .audience-grid, .contact-box {
+        grid-template-columns: 1fr;
+      }
+      .links { display: none; }
+      .hero { padding-top: 72px; }
+      .hero-stats { grid-template-columns: 1fr; }
+      section { padding: 68px 0; }
+      .section-head { gap: 12px; }
+      .nav-cta { padding: 10px 12px; font-size: .86rem; }
+    }
+    @media (max-width: 640px) {
+      .grid-3 { grid-template-columns: 1fr; }
+      .contact-box { padding: 26px 20px; }
+      .actions .btn { flex: 1 1 100%; }
+      .audience-card { padding: 24px 20px; min-height: 0; }
+    }
+    @media (max-width: 430px) {
+      .brand span:last-child { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#accueil" aria-label="Accueil Pléthore Réseaux">
+        <span class="mark">P</span>
+        <span>Pléthore Réseaux</span>
+      </a>
+      <nav class="links" aria-label="Navigation principale">
+        <a href="#diagnostic">Diagnostic</a>
+        <a href="#offres">Offres</a>
+        <a href="#impact">Impact</a>
+        <a href="#methode">Méthode</a>
+      </nav>
+      <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Activer le mode nuit" title="Basculer le mode clair / nuit">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a class="nav-cta" href="#contact">Demander un appel</a>
+      <details class="profile-menu">
+        <summary>Menu</summary>
+        <div class="profile-menu-list">
+          <a href="#profil-associations">Structures</a>
+          <a href="#profil-salons">Salons</a>
+          <a href="#profil-partenaires">Réseau terrain</a>
+          <a href="#profil-particuliers">Débutants</a>
+        </div>
+      </details>
+    </div>
+  </header>
+
+  <main id="accueil">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Ateliers barber pour salons indépendants</span>
+          <h1>Aidez votre salon à capter la demande barber moderne.</h1>
+          <p class="lead">Pléthore Réseaux accompagne les salons de coiffure qui veulent attirer davantage de clients hommes, ajouter des prestations barber et monter en compétence sur le terrain, sans recruter immédiatement un barber à temps plein.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact">Demander un diagnostic salon</a>
+            <a class="btn btn-light" href="#offres">Voir les ateliers</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-stats">
+            <div class="hero-stat"><strong>Diagnostic</strong><span>Clarifier le besoin</span></div>
+            <div class="hero-stat"><strong>Ateliers</strong><span>Bootcamp intensif ou personnalisés</span></div>
+            <div class="hero-stat"><strong>Services supplémentaires</strong><span>Création &amp; boost réseaux sociaux, propositions de profils, pratiques sur modèles.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="diagnostic">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Le problème</span>
+            <h2>Les barber shops captent une demande que beaucoup de salons peuvent aussi servir.</h2>
+          </div>
+          <p>Skin fade, taper fade, burst fade, barbe, cheveux afro, boucles, visibilité Instagram : la demande existe déjà. La question est de savoir si votre salon est prêt à y répondre avec confiance, méthode et qualité.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Diagnostic salon</h3>
+            <p>Nous analysons votre offre homme actuelle, vos prestations, votre équipe, votre communication locale et les opportunités barber les plus réalistes.</p>
+          </article>
+          <article class="card">
+            <h3>Plan d'action simple</h3>
+            <p>Vous repartez avec les priorités : prestations à ajouter, niveau de pratique à renforcer, contenu réseaux sociaux et organisation possible.</p>
+          </article>
+          <article class="card">
+            <h3>Approche terrain</h3>
+            <p>Pas de promesse magique. On construit un plan crédible pour progresser, tester et vendre mieux les prestations hommes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-band" id="offres">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Nos offres</span>
+            <h2>Des ateliers pratiques, pas un cursus certifiant.</h2>
+          </div>
+          <p>Le parcours reste volontairement simple : on clarifie le besoin, on teste une journée sur le terrain, puis on passe au bootcamp intensif si le salon veut structurer une vraie offre barber.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card offer">
+            <div>
+              <span class="tag">Entrée simple</span>
+              <h3>Diagnostic salon</h3>
+              <p>Un point court pour identifier vos opportunités barber, vos freins et le bon format d'accompagnement.</p>
+              <ul>
+                <li>Analyse de votre offre actuelle</li>
+                <li>Priorités barber à travailler</li>
+                <li>Recommandation du meilleur format</li>
+              </ul>
+            </div>
+            <a class="btn btn-primary" href="#contact">Demander un appel</a>
+          </article>
+          <article class="card offer">
+            <div>
+              <span class="tag">Offre découverte</span>
+              <h3>Bootcamp découverte 1 jour</h3>
+              <p>Une journée terrain pour tester l'intérêt du salon, initier l'équipe et voir quelles prestations barber peuvent être ajoutées rapidement.</p>
+              <ul>
+                <li>Démonstration et pratique encadrée</li>
+                <li>Skin fade, taper fade, barbe</li>
+                <li>Recommandation pour la suite</li>
+              </ul>
+            </div>
+            <a class="btn btn-primary" href="#contact">Recevoir l'offre découverte</a>
+          </article>
+          <article class="card offer">
+            <div>
+              <span class="tag">Offre principale</span>
+              <h3>Bootcamp intensif 3 jours</h3>
+              <p>Le format principal pour faire monter l'équipe en compétence et construire une offre homme plus crédible, plus moderne et plus vendable.</p>
+              <ul>
+                <li>Pratique encadrée par barber pro</li>
+                <li>Cheveux lisses, boucles, frisés, afro</li>
+                <li>Plan de lancement des prestations hommes</li>
+              </ul>
+            </div>
+            <a class="btn btn-primary" href="#contact">Construire le programme</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-band" id="impact">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Impact social</span>
+            <h2>Un projet business avec une dimension utile.</h2>
+          </div>
+          <p>L'impact social ne remplace pas la performance commerciale : il la rend plus crédible. Pléthore Réseaux veut créer un pont entre salons, barbers, structures sociales et publics qui ont besoin d'image de soi, de confiance et d'orientation métier.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Coupes solidaires</h3>
+            <p>Actions ponctuelles avec des partenaires sociaux, selon les moyens disponibles et le cadre défini.</p>
+          </article>
+          <article class="card">
+            <h3>Ateliers image de soi</h3>
+            <p>Initiatives autour de la présentation, de la confiance et de la réinsertion, avec des partenaires adaptés.</p>
+          </article>
+          <article class="card">
+            <h3>Réseau de talents</h3>
+            <p>Mobiliser des barbers professionnels et des profils en montée de compétence dans un cadre clair.</p>
+          </article>
+        </div>
+        <div class="legal-note">Important : les ateliers présentés ici ne sont pas des formations diplômantes ou certifiantes. Aucun résultat commercial n'est garanti ; l'accompagnement dépend du contexte du salon, de l'équipe et de l'exécution.</div>
+      </div>
+    </section>
+
+    <section id="profils">
+      <div class="wrap">
+        <div class="profils-head">
+          <span class="eyebrow">Espaces par profil</span>
+          <h2>Chaque public entre dans le projet par une porte différente.</h2>
+          <p>Cette section vous oriente rapidement en fonction de votre profil sans vous perdre.</p>
+        </div>
+        <div class="audience-grid">
+          <a class="audience-card" id="profil-associations" href="#impact">
+            <div>
+              <span class="tag">Structures</span>
+              <h3>Associations et collaborateurs</h3>
+              <p>Vous souhaitez accueillir des ateliers dans vos locaux.</p>
+            </div>
+            <span class="go">Visiter le site</span>
+          </a>
+          <a class="audience-card" id="profil-salons" href="#offres">
+            <div>
+              <span class="tag">Salons</span>
+              <h3>Salons de coiffure et professionnels de la coiffure</h3>
+              <p>Vous êtes professionnels et souhaitez participer à nos ateliers.</p>
+            </div>
+            <span class="go">Visiter le site</span>
+          </a>
+          <a class="audience-card" id="profil-partenaires" href="#contact">
+            <div>
+              <span class="tag">Réseau terrain</span>
+              <h3>Partenaires et barbers</h3>
+              <p>Vous souhaitez travailler avec nous.</p>
+            </div>
+            <span class="go">Visiter le site</span>
+          </a>
+          <a class="audience-card" id="profil-particuliers" href="#contact">
+            <div>
+              <span class="tag">Débutants</span>
+              <h3>Particuliers et non professionnels de la coiffure</h3>
+              <p>Vous débutez et souhaitez participer à nos ateliers.</p>
+            </div>
+            <span class="go">Visiter le site</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="methode">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Méthode</span>
+            <h2>Un parcours simple pour éviter de perdre du temps.</h2>
+          </div>
+          <p>L'objectif est de comprendre vite, tester proprement et construire une offre barber crédible dans votre salon.</p>
+        </div>
+        <div class="process">
+            <div class="step">
+              <div>
+                <h3>Diagnostic et recommandation</h3>
+                <p>On choisit le bon format : diagnostic seul.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div>
+                <h3>Bootcamp terrain</h3>
+                <p>Un barber professionnel encadre la pratique, les gestes, l'hygiène, la posture client et les prestations prioritaires. Envoyez votre coiffeur ou votre équipe dans nos ateliers de pratique.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div>
+                <h3>Suivi et amélioration</h3>
+                <p>On ne vous abandonne pas et on vous propose : des profils de barbers, créer et booster votre présence sur les réseaux sociaux, pratiquer sur modèles vos coupes en fonction de vos besoins.</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="contact-box">
+          <div>
+            <span class="eyebrow">Contact</span>
+            <h2>Vous voulez savoir si votre salon peut capter plus de demande ?</h2>
+            <p>Envoyez un message court avec votre projet, votre demande, le nom du salon, la ville, le nombre de personnes dans l'équipe et ce que vous proposez déjà en prestations hommes.</p>
+          </div>
+          <div class="contact-list">
+            <a href="mailto:daves.compagny@gmail.com?subject=Diagnostic%20salon%20-%20Pl%C3%A9thore%20R%C3%A9seaux">daves.compagny@gmail.com</a>
+            <a href="tel:+33766220181">07 66 22 01 81</a>
+            <span>Île-de-France et France</span>
+            <a class="btn btn-primary" href="mailto:daves.compagny@gmail.com?subject=Je%20veux%20un%20diagnostic%20salon&body=Bonjour%2C%0A%0AJe%20souhaite%20un%20diagnostic%20pour%20mon%20salon.%0A%0ANom%20du%20salon%20%3A%0AVille%20%3A%0ANombre%20de%20personnes%20dans%20l%27%C3%A9quipe%20%3A%0APrestations%20hommes%20actuelles%20%3A%0A%0AMerci.">Demander un diagnostic</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span>© 2026 Pléthore Réseaux. Tous droits réservés.</span>
+      <span>Ateliers pratiques barber, accompagnement salon et impact social.</span>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" id="back-to-top" aria-label="Remonter en haut de la page" title="Remonter en haut">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script>
+    // Bascule mode clair / mode nuit (clair par défaut, choix mémorisé si possible)
+    (function () {
+      var root = document.documentElement;
+      var toggle = document.getElementById("theme-toggle");
+      var saved = null;
+      try { saved = localStorage.getItem("plethore-theme"); } catch (e) {}
+      if (saved === "dark") { root.setAttribute("data-theme", "dark"); }
+      function updateLabel() {
+        var dark = root.getAttribute("data-theme") === "dark";
+        toggle.setAttribute("aria-label", dark ? "Activer le mode clair" : "Activer le mode nuit");
+      }
+      updateLabel();
+      toggle.addEventListener("click", function () {
+        var dark = root.getAttribute("data-theme") === "dark";
+        if (dark) { root.removeAttribute("data-theme"); }
+        else { root.setAttribute("data-theme", "dark"); }
+        try { localStorage.setItem("plethore-theme", dark ? "light" : "dark"); } catch (e) {}
+        updateLabel();
+      });
+    })();
+
+    // Bouton retour en haut : apparaît après un peu de défilement
+    (function () {
+      var btn = document.getElementById("back-to-top");
+      function onScroll() {
+        btn.classList.toggle("visible", window.scrollY > 400);
+      }
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+      btn.addEventListener("click", function () {
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+      });
+    })();
+
+    // Ferme le menu déroulant après un clic sur une entrée
+    document.querySelectorAll(".profile-menu-list a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        link.closest("details").removeAttribute("open");
+      });
+    });
+    // Ferme le menu déroulant si on clique en dehors
+    document.addEventListener("click", function (e) {
+      var menu = document.querySelector(".profile-menu[open]");
+      if (menu && !menu.contains(e.target)) {
+        menu.removeAttribute("open");
+      }
+    });
+  </script>
+</body>
+</html>

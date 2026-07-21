@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  --color-cream: #f7f5ef;
+  --color-warm-white: #fffdf8;
+  --color-ink: #121212;
+  --color-muted: #5f625c;
+  --color-line: #ded8ca;
+  --color-surface: #fffdf8;
+  --color-surface-strong: #ece4d3;
+  --color-green: #153f35;
+  --color-green-soft: #e3eee9;
+  --color-green-tint: #7fb3a3;
+  --color-bronze: #9b6b35;
+  --color-bronze-soft: #f0dfc8;
+  --color-bronze-strong: #84582b;
+  --color-black: #0c0d0c;
+  --color-band: #0c0d0c;
+  --color-band-card: #151715;
+
+  --shadow-soft: 0 18px 45px rgba(12, 13, 12, 0.12);
+}
+
+:root[data-theme="dark"] {
+  --color-cream: #111310;
+  --color-ink: #edeae2;
+  --color-muted: #a6a99f;
+  --color-line: #2a2d27;
+  --color-surface: #181a17;
+  --color-surface-strong: #1e211c;
+  --color-green-soft: #17281f;
+  --color-bronze-soft: #2b2115;
+  --color-band: #0a0b0a;
+  --color-band-card: #141613;
+
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.4);
+}
+
+@theme inline {
+  --color-cream: var(--color-cream);
+  --color-warm-white: var(--color-warm-white);
+  --color-ink: var(--color-ink);
+  --color-muted: var(--color-muted);
+  --color-line: var(--color-line);
+  --color-surface: var(--color-surface);
+  --color-surface-strong: var(--color-surface-strong);
+  --color-green: var(--color-green);
+  --color-green-soft: var(--color-green-soft);
+  --color-green-tint: var(--color-green-tint);
+  --color-bronze: var(--color-bronze);
+  --color-bronze-soft: var(--color-bronze-soft);
+  --color-bronze-strong: var(--color-bronze-strong);
+  --color-black: var(--color-black);
+  --color-band: var(--color-band);
+  --color-band-card: var(--color-band-card);
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-bronze-soft);
+  color: var(--color-black);
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid var(--color-bronze);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
