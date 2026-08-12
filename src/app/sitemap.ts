@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+export const revalidate = false;
+
 const BASE_URL = "https://plethore-reseaux.fr";
 
 const ROUTES = [
