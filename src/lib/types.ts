@@ -108,6 +108,20 @@ export interface Workshop {
   status: "a_venir" | "complet" | "termine";
 }
 
+export type RenfortStatut = "Alternance" | "Stage" | "Emploi";
+
+export interface DemoRenfort {
+  id: string;
+  prenom: string;
+  initiale: string;
+  statut: RenfortStatut;
+  experienceAnnees: number;
+  competences: string[];
+  zone: string;
+  niveauGlobal: number;
+  statutCarte: Workshop["status"];
+}
+
 export interface DemoDocument {
   id: string;
   title: string;

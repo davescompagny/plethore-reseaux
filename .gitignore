@@ -54,3 +54,6 @@ next-env.d.ts
 
 # old broken offline export attempt (kept locally until cleanup)
 /version-partage-old/
+
+# screenshots de contrôle générés par Playwright
+/captures-controle/

@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Bell, LogOut, Menu, Settings, X } from "lucide-react";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { ProfileSwitcher } from "./ProfileSwitcher";
-import { NAV_ITEMS } from "./Sidebar";
+import { NAV_ITEMS, navLabel } from "./Sidebar";
 import { useDemoProfile } from "@/lib/demo/DemoProfileContext";
 import { DEMO_USERS } from "@/lib/data/demoProfiles";
 import { DEMO_NOTIFICATIONS } from "@/lib/data/demoNotifications";
@@ -21,7 +21,8 @@ export function Topbar() {
 
   const user = DEMO_USERS[profileKind];
   const unread = DEMO_NOTIFICATIONS[profileKind].filter((n) => !n.read).length;
-  const currentLabel = NAV_ITEMS.find((i) => i.href === pathname)?.label ?? "Tableau de bord";
+  const currentItem = NAV_ITEMS.find((i) => i.href === pathname);
+  const currentLabel = currentItem ? navLabel(currentItem, profileKind) : "Tableau de bord";
 
   async function handleLogout() {
     await signOut();
@@ -114,7 +115,7 @@ export function Topbar() {
                     )}
                   >
                     <item.icon className="size-5 shrink-0" aria-hidden="true" />
-                    {item.label}
+                    {navLabel(item, profileKind)}
                   </Link>
                 );
               })}

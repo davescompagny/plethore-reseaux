@@ -13,6 +13,8 @@ import {
   UserCircle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useDemoProfile } from "@/lib/demo/DemoProfileContext";
+import type { ProfileKind } from "@/lib/types";
 import { ProfileSwitcher } from "./ProfileSwitcher";
 import { signOut } from "@/lib/services/mockAuthService";
 
@@ -26,9 +28,15 @@ export const NAV_ITEMS = [
   { href: "/demo/espace/parametres", label: "Paramètres", icon: Settings },
 ];
 
+export function navLabel(item: { href: string; label: string }, profileKind: ProfileKind) {
+  if (item.href === "/demo/espace/ateliers" && profileKind === "salon") return "Renforts";
+  return item.label;
+}
+
 export function Sidebar() {
   const pathname = usePathname();
   const router = useRouter();
+  const { profileKind } = useDemoProfile();
 
   async function handleLogout() {
     await signOut();
@@ -58,7 +66,7 @@ export function Sidebar() {
               )}
             >
               <item.icon className="size-4.5 shrink-0" aria-hidden="true" />
-              {item.label}
+              {navLabel(item, profileKind)}
             </Link>
           );
         })}
