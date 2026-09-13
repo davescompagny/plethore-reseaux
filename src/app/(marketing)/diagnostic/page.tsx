@@ -4,7 +4,7 @@ import { DiagnosticWizard } from "@/components/forms/DiagnosticWizard";
 
 export const metadata: Metadata = {
   title: "Diagnostic salon",
-  description: "Répondez à huit questions courtes pour obtenir une recommandation indicative entre atelier découverte et atelier intensif.",
+  description: "Répondez à huit questions courtes pour obtenir une recommandation indicative : le type de profil adapté à votre salon et, en complément, un atelier de pratique.",
 };
 
 export default function DiagnosticPage() {

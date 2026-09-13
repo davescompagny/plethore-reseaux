@@ -5,7 +5,7 @@ export const DEMO_REQUESTS: Record<ProfileKind, WorkshopRequest[]> = {
     {
       id: "r-salon-1",
       profileKind: "salon",
-      label: "Atelier intensif",
+      label: "Atelier de pratique",
       detail: "Demande envoyée pour 2 membres de l'équipe, session du 18 août à Créteil.",
       status: "planifiee",
       createdAt: "2026-07-01T10:00:00.000Z",
@@ -47,7 +47,7 @@ export const DEMO_REQUESTS: Record<ProfileKind, WorkshopRequest[]> = {
     {
       id: "r-debutant-1",
       profileKind: "debutant",
-      label: "Demande de participation — Atelier découverte",
+      label: "Demande de participation — Atelier de pratique",
       detail: "Demande envoyée, en attente de place disponible sur une prochaine session.",
       status: "acceptee",
       createdAt: "2026-07-08T10:00:00.000Z",

@@ -7,14 +7,14 @@ import { FinalCtaSection } from "@/components/marketing/FinalCtaSection";
 
 export const metadata: Metadata = {
   title: "Pour les salons de coiffure",
-  description: "Salons de coiffure et professionnels : diagnostic, ateliers et suivi pour structurer votre offre barber.",
+  description: "Salons de coiffure : des profils de coiffeurs en montée de compétences (alternants, stagiaires, employés) pour renforcer votre équipe, avec diagnostic et ateliers en complément.",
 };
 
 const STEPS = [
-  "Un diagnostic court de votre offre homme actuelle",
-  "Une recommandation entre atelier découverte et atelier intensif",
-  "Une pratique encadrée par un barber professionnel",
-  "Un suivi terrain : réseaux sociaux, profils de barbers, pratique sur modèles",
+  "Des profils de coiffeurs en montée de compétences : alternants, stagiaires, employés",
+  "Un diagnostic court de votre offre homme actuelle (service complémentaire)",
+  "Des ateliers de pratique encadrés par un barber professionnel (service complémentaire)",
+  "Un suivi terrain : réseaux sociaux, pratique sur modèles",
 ];
 
 export default function SalonsPage() {
@@ -22,8 +22,8 @@ export default function SalonsPage() {
     <>
       <PageIntro
         eyebrow="Salons de coiffure"
-        title="Structurez une offre barber crédible, sans tout changer d'un coup."
-        description="Vous êtes salon de coiffure indépendant et vous voulez capter plus de clientèle masculine sans recruter immédiatement un barber à temps plein."
+        title="Renforcez votre équipe avec des profils adaptés à vos besoins."
+        description="Vous êtes salon de coiffure indépendant et vous voulez capter plus de clientèle masculine. Nous vous proposons des profils de coiffeurs en montée de compétences pour renforcer vos équipes : alternants, stagiaires, employés — des profils adaptés selon vos besoins."
       />
       <section className="py-20 sm:py-24">
         <div className="mx-auto grid max-w-[1160px] gap-10 px-5 lg:grid-cols-2 lg:gap-14">
@@ -38,8 +38,8 @@ export default function SalonsPage() {
               ))}
             </ul>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link href="/diagnostic" className="focus-ring inline-flex min-h-12 items-center justify-center rounded-lg bg-bronze px-5 font-extrabold text-white hover:bg-bronze-strong">
-                Demander un diagnostic
+              <Link href="/contact" className="focus-ring inline-flex min-h-12 items-center justify-center rounded-lg bg-bronze px-5 font-extrabold text-white hover:bg-bronze-strong">
+                Demander un profil
               </Link>
               <Link href="/inscription" className="focus-ring inline-flex min-h-12 items-center justify-center rounded-lg border border-line px-5 font-extrabold hover:bg-green-soft hover:text-green">
                 Créer mon espace salon

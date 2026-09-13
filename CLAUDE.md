@@ -11,6 +11,7 @@
 - Ne jamais supprimer ni renommer un composant ou un fichier sans demande explicite.
 - Ne jamais exécuter git commit, git checkout, git reset, git stash : l'utilisateur gère Git.
 - Le travail se fait uniquement dans src/, puis régénération de l'export. Jamais de modification directe des HTML de version-partage/.
+- Fichiers non suivis à la racine (barber.html, index-7.html, plethore-reseaux-complet-4.html et son .zip) : ne jamais les ajouter à git, ils seront traités au nettoyage.
 
 ## Design
 - Palette : vert profond #153f35, bronze #9b6b35, off-white #f7f5ef. Typographie : Inter.

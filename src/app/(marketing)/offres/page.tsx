@@ -4,9 +4,9 @@ import { OffersSection } from "@/components/marketing/OffersSection";
 import { FinalCtaSection } from "@/components/marketing/FinalCtaSection";
 
 export const metadata: Metadata = {
-  title: "Offres — Diagnostic, atelier découverte et atelier intensif",
+  title: "Offres — Profils de coiffeurs, diagnostic et ateliers",
   description:
-    "Découvrez les trois offres Pléthore Réseaux : diagnostic salon, atelier découverte et atelier intensif pour structurer votre offre barber.",
+    "Pléthore Réseaux propose aux salons des profils de coiffeurs en montée de compétences — alternants, stagiaires, employés — avec, en services complémentaires, un diagnostic salon et des ateliers de pratique.",
 };
 
 export default function OffresPage() {
@@ -14,8 +14,8 @@ export default function OffresPage() {
     <>
       <PageIntro
         eyebrow="Nos offres"
-        title="Trois formats, un seul objectif : une offre barber crédible."
-        description="Du premier échange à l'atelier intensif, chaque étape est pensée pour rester utile même si vous ne réservez qu'un diagnostic."
+        title="Des profils pour renforcer votre équipe, des services pour la faire progresser."
+        description="Vous choisissez le profil qui correspond à votre besoin ; le diagnostic et les ateliers de pratique restent disponibles en complément."
       />
       <OffersSection />
       <FinalCtaSection />

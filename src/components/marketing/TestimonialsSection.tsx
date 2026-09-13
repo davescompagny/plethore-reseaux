@@ -22,7 +22,7 @@ export function TestimonialsSection() {
             <span className="font-semibold text-ink">[À valider par Pléthore Réseaux]</span>
           </p>
           <Link href="/contact" className="focus-ring font-extrabold text-bronze hover:underline">
-            Vous avez testé un atelier ? Partagez votre retour
+            Vous avez travaillé avec nous ? Partagez votre retour
           </Link>
         </div>
       </div>

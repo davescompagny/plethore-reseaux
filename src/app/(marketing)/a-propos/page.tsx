@@ -5,7 +5,7 @@ import { FinalCtaSection } from "@/components/marketing/FinalCtaSection";
 
 export const metadata: Metadata = {
   title: "À propos",
-  description: "Pléthore Réseaux : ateliers barber pour salons de coiffure indépendants, avec une dimension d'impact social.",
+  description: "Pléthore Réseaux : profils de coiffeurs pour salons de coiffure indépendants, diagnostic et ateliers en complément, avec une dimension d'impact social.",
 };
 
 export default function AProposPage() {
@@ -22,9 +22,10 @@ export default function AProposPage() {
             <h2 className="mb-2.5 text-xl font-bold">Notre approche</h2>
             <p>
               Nous partons du principe que la demande barber existe déjà chez la plupart des salons indépendants.
-              Notre rôle est de clarifier le potentiel réel du salon (diagnostic), de faire monter l&apos;équipe en
-              compétence sur le terrain (ateliers) et d&apos;assurer un suivi concret (réseaux sociaux, profils de
-              barbers, pratique sur modèles).
+              Notre rôle est de renforcer votre équipe avec des profils de coiffeurs en montée de compétences
+              (alternants, stagiaires, employés), et en complément de clarifier le potentiel réel du salon
+              (diagnostic), de faire progresser l&apos;équipe sur le terrain (ateliers de pratique) et d&apos;assurer un
+              suivi concret (réseaux sociaux, pratique sur modèles).
             </p>
           </Card>
           <Card>

@@ -11,11 +11,11 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL("https://plethore-reseaux.fr"),
   title: {
-    default: "Pléthore Réseaux — Ateliers barber pour salons de coiffure",
+    default: "Pléthore Réseaux — Profils de coiffeurs pour renforcer votre salon",
     template: "%s — Pléthore Réseaux",
   },
   description:
-    "Pléthore Réseaux aide les salons de coiffure indépendants à capter la demande barber moderne grâce au diagnostic salon, à l'atelier découverte, à l'atelier intensif et aux options de suivi.",
+    "Pléthore Réseaux propose aux salons de coiffure indépendants des profils de coiffeurs en montée de compétences pour renforcer leurs équipes : alternants, stagiaires, employés. En complément : diagnostic salon et ateliers de pratique.",
 };
 
 const themeInitScript = `

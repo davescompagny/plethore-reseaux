@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const STEPS = [
-  "Un atelier découverte pour tester votre intérêt et vos gestes de base",
+  "Un atelier de pratique pour tester votre intérêt et vos gestes de base",
   "Un cadre pédagogique clair, sans certification à la clé",
   "Des conseils d'orientation métier honnêtes",
   "Aucune promesse d'embauche ou de reconversion garantie",

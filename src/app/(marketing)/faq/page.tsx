@@ -5,7 +5,7 @@ import { FinalCtaSection } from "@/components/marketing/FinalCtaSection";
 
 export const metadata: Metadata = {
   title: "FAQ — Questions fréquentes",
-  description: "Réponses aux questions les plus fréquentes sur les ateliers, le diagnostic et le portail de démonstration Pléthore Réseaux.",
+  description: "Réponses aux questions les plus fréquentes sur les profils de coiffeurs, le diagnostic, les ateliers et le portail de démonstration Pléthore Réseaux.",
 };
 
 export default function FaqPage() {

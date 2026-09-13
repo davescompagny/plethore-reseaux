@@ -6,7 +6,7 @@ import { CONTACT } from "@/lib/site-content";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Contactez Pléthore Réseaux pour un diagnostic salon, une proposition d'atelier ou toute autre question.",
+  description: "Contactez Pléthore Réseaux pour une demande de profil, un diagnostic salon, un atelier ou toute autre question.",
 };
 
 export default function ContactPage() {
@@ -15,7 +15,7 @@ export default function ContactPage() {
       <PageIntro
         eyebrow="Contact"
         title="Vous voulez savoir si votre salon peut capter plus de demande ?"
-        description="Envoyez un message court avec votre projet : nom du salon, ville, taille d'équipe et prestations actuelles."
+        description="Envoyez un message court avec votre projet : nom du salon, ville, taille d'équipe, prestations actuelles et type de profil recherché."
       />
       <section className="py-20 sm:py-24">
         <div className="mx-auto grid max-w-[1160px] gap-10 px-5 lg:grid-cols-[1fr_.8fr]">

@@ -45,18 +45,18 @@ export function computeDiagnosticResult(answers: DiagnosticAnswers): DiagnosticR
   let recommendationLabel: string;
   if (maturity === "avance") {
     recommendation = "intensif";
-    recommendationLabel = "Atelier intensif";
+    recommendationLabel = "Renfort par un employé";
   } else if (maturity === "en_progression") {
     if (answers.difficulties.length > 2) {
       recommendation = "decouverte";
-      recommendationLabel = "Atelier découverte";
+      recommendationLabel = "Renfort par un stagiaire + atelier de pratique";
     } else {
       recommendation = "intensif";
-      recommendationLabel = "Atelier intensif";
+      recommendationLabel = "Renfort par un alternant + atelier de pratique";
     }
   } else {
     recommendation = "decouverte";
-    recommendationLabel = "Atelier découverte";
+    recommendationLabel = "Renfort par un stagiaire + atelier de pratique";
   }
 
   return {

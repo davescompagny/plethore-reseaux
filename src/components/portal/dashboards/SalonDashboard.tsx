@@ -47,7 +47,7 @@ export function SalonDashboard() {
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <InfoCard icon={TrendingUp} title="Recommandation">
-          Atelier intensif — objectif : {profile.goal}
+          Renfort par un alternant + atelier de pratique — objectif : {profile.goal}
         </InfoCard>
         <InfoCard icon={ClipboardList} title="Demande en cours">
           {requests[0]?.label ?? "Aucune demande en cours"}
@@ -69,7 +69,7 @@ export function SalonDashboard() {
         </InfoCard>
         <InfoCard icon={ClipboardList} title="Prochaines étapes">
           <ul className="grid gap-1.5">
-            <li>Confirmer les places à l'atelier intensif</li>
+            <li>Confirmer les places à l&apos;atelier de pratique</li>
             <li>{profile.mainNeed}</li>
           </ul>
         </InfoCard>

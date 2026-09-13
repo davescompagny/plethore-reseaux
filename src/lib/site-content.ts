@@ -41,7 +41,7 @@ export const SOLUTIONS_PANEL = [
 export const PROFILES_PANEL = [
   {
     title: "Salons de coiffure",
-    description: "Vous êtes professionnels et souhaitez participer à nos ateliers.",
+    description: "Vous êtes salon de coiffure et souhaitez renforcer votre équipe avec des profils adaptés.",
     href: "/profils/salons",
   },
   {
@@ -62,11 +62,11 @@ export const PROFILES_PANEL = [
 ];
 
 export const HERO = {
-  eyebrow: "Ateliers barber pour salons indépendants",
-  title: "Développez le potentiel barber de votre salon.",
+  eyebrow: "Profils de coiffeurs pour salons indépendants",
+  title: "Renforcez votre équipe avec des profils de coiffeurs en montée de compétences.",
   description:
-    "Pléthore Réseaux aide les salons à analyser leur potentiel, structurer leur offre barber et accompagner leurs équipes grâce à une approche concrète et personnalisée.",
-  ctaPrimary: { label: "Demander un diagnostic", href: "/diagnostic" },
+    "Nous vous proposons des profils de coiffeurs en montée de compétences pour renforcer vos équipes : alternants, stagiaires, employés — des profils adaptés selon vos besoins. Le diagnostic salon et les ateliers de pratique restent disponibles en services complémentaires.",
+  ctaPrimary: { label: "Demander un profil", href: "/contact" },
   ctaSecondary: { label: "Découvrir le portail", href: "/inscription" },
 };
 
@@ -77,62 +77,96 @@ export const PROBLEM = {
     "Skin fade, taper fade, burst fade, barbe, cheveux afro, boucles, visibilité Instagram : la demande existe déjà. La question est de savoir si votre salon est prêt à y répondre avec confiance, méthode et qualité.",
   cards: [
     {
-      title: "Diagnostic salon",
+      title: "Des profils adaptés à vos besoins",
       description:
-        "Nous analysons votre offre homme actuelle, vos prestations, votre équipe, votre communication locale et les opportunités barber les plus réalistes.",
+        "Alternants, stagiaires ou employés : nous vous proposons des coiffeurs en montée de compétences pour renforcer votre équipe selon votre organisation et vos prestations.",
     },
     {
-      title: "Plan d'action simple",
+      title: "Diagnostic et plan d'action",
       description:
-        "Vous repartez avec les priorités : prestations à ajouter, niveau de pratique à renforcer, contenu réseaux sociaux et organisation possible.",
+        "En service complémentaire, un diagnostic court vous donne les priorités : prestations à ajouter, niveau de pratique à renforcer, contenu réseaux sociaux et organisation possible.",
     },
     {
       title: "Approche terrain",
       description:
-        "Pas de promesse magique. On construit un plan crédible pour progresser, tester et vendre mieux les prestations hommes.",
+        "Pas de promesse magique. Un profil intégré à votre équipe, des ateliers de pratique si besoin, et un plan crédible pour vendre mieux les prestations hommes.",
     },
   ],
 };
 
 export const OFFERS = [
   {
+    id: "alternants",
+    tag: "Profil",
+    title: "Alternants",
+    description:
+      "Un coiffeur en formation qui rejoint votre équipe en alternance et progresse sur vos prestations, au rythme de votre salon.",
+    bullets: [
+      "Présence régulière dans votre salon",
+      "Montée de compétences suivie",
+      "Cadre défini directement avec vous",
+    ],
+    cta: "Demander ce profil",
+    href: "/contact",
+  },
+  {
+    id: "stagiaires",
+    tag: "Profil",
+    title: "Stagiaires",
+    description:
+      "Un profil en début de parcours ou en reconversion qui vient se former dans votre salon sur une période définie avec vous.",
+    bullets: [
+      "Période et horaires convenus ensemble",
+      "Encadrement par votre équipe",
+      "Aucune obligation d'embauche",
+    ],
+    cta: "Demander ce profil",
+    href: "/contact",
+  },
+  {
+    id: "employes",
+    tag: "Profil",
+    title: "Employés",
+    description:
+      "Un coiffeur en montée de compétences prêt à intégrer votre équipe pour renforcer vos prestations hommes et barber.",
+    bullets: [
+      "Profil présenté selon votre besoin",
+      "Compétences barber en progression",
+      "Cadre contractuel discuté directement avec vous",
+    ],
+    cta: "Demander ce profil",
+    href: "/contact",
+  },
+];
+
+export const COMPLEMENTARY_OFFERS = [
+  {
     id: "diagnostic",
-    tag: "Entrée simple",
+    tag: "Complément",
     title: "Diagnostic salon",
     description:
-      "Un point court pour identifier vos opportunités barber, vos freins et le bon format d'accompagnement.",
+      "Un point court pour identifier vos opportunités barber, vos freins et le profil ou le service adapté.",
     bullets: [
       "Analyse de votre offre actuelle",
       "Priorités barber à travailler",
-      "Recommandation du meilleur format",
+      "Recommandation du profil et des services adaptés",
     ],
-    cta: "Demander un appel",
+    cta: "Demander un diagnostic",
+    href: "/diagnostic",
   },
   {
-    id: "decouverte",
-    tag: "Offre découverte",
-    title: "Atelier découverte",
+    id: "ateliers",
+    tag: "Complément",
+    title: "Ateliers de pratique",
     description:
-      "Une session terrain pour tester l'intérêt du salon, initier l'équipe et voir quelles prestations barber peuvent être ajoutées rapidement.",
-    bullets: [
-      "Démonstration et pratique encadrée",
-      "Skin fade, taper fade, barbe",
-      "Recommandation pour la suite",
-    ],
-    cta: "Recevoir l'offre découverte",
-  },
-  {
-    id: "intensif",
-    tag: "Offre principale",
-    title: "Atelier intensif",
-    description:
-      "Le format principal pour faire monter l'équipe en compétence et construire une offre homme plus crédible, plus moderne et plus vendable.",
+      "Des ateliers encadrés par un barber professionnel pour faire progresser votre équipe sur les prestations barber.",
     bullets: [
       "Pratique encadrée par barber pro",
+      "Skin fade, taper fade, barbe",
       "Cheveux lisses, boucles, frisés, afro",
-      "Plan de lancement des prestations hommes",
     ],
-    cta: "Construire le programme",
+    cta: "Nous contacter",
+    href: "/contact",
   },
 ];
 
@@ -162,12 +196,12 @@ export const IMPACT = {
 export const METHOD_STEPS = [
   {
     title: "Diagnostic et recommandation",
-    description: "On choisit le bon format : diagnostic seul, atelier découverte ou atelier intensif selon votre situation.",
+    description: "On choisit le bon format : diagnostic seul ou atelier de pratique selon votre situation.",
   },
   {
-    title: "Atelier terrain",
+    title: "Renfort de votre équipe",
     description:
-      "Un barber professionnel encadre la pratique, les gestes, l'hygiène, la posture client et les prestations prioritaires. Envoyez votre coiffeur ou votre équipe dans nos ateliers de pratique.",
+      "Nous vous proposons des profils de coiffeurs en montée de compétences pour renforcer vos équipes : alternants, stagiaires, employés — des profils adaptés selon vos besoins. Les ateliers de pratique encadrés par un barber professionnel restent disponibles pour votre équipe.",
   },
   {
     title: "Suivi et amélioration",
@@ -181,7 +215,7 @@ export const AUDIENCE_CARDS = [
     id: "salons",
     tag: "Salons",
     title: "Salons de coiffure et professionnels de la coiffure",
-    description: "Vous êtes professionnels et souhaitez participer à nos ateliers.",
+    description: "Vous êtes salon de coiffure et souhaitez renforcer votre équipe avec des profils adaptés.",
     href: "/profils/salons",
   },
   {
@@ -216,7 +250,7 @@ export const FAQ_ITEMS = [
   {
     question: "Faut-il recruter un barber à temps plein ?",
     answer:
-      "Non, ce n'est pas nécessaire pour démarrer. Le diagnostic et les ateliers permettent à votre équipe actuelle de monter en compétence sur les prestations barber, avant d'envisager un recrutement si besoin.",
+      "Non. Nous vous proposons des profils de coiffeurs en montée de compétences pour renforcer vos équipes : alternants, stagiaires, employés — des profils adaptés selon vos besoins. En complément, le diagnostic et les ateliers de pratique permettent à votre équipe actuelle de progresser sur les prestations barber.",
   },
   {
     question: "Quels résultats commerciaux sont garantis ?",
@@ -224,9 +258,14 @@ export const FAQ_ITEMS = [
       "Aucun résultat commercial n'est garanti. L'accompagnement dépend du contexte du salon, de l'équipe et de l'exécution. Nous construisons un plan crédible, pas une promesse.",
   },
   {
-    question: "Quelle est la différence entre l'atelier découverte et l'atelier intensif ?",
+    question: "Quels types de profils proposez-vous ?",
     answer:
-      "L'atelier découverte permet de tester l'intérêt du salon et d'initier l'équipe. L'atelier intensif est le format principal pour structurer une vraie offre barber avec une pratique plus poussée.",
+      "Nous vous proposons des profils de coiffeurs en montée de compétences pour renforcer vos équipes : alternants, stagiaires, employés — des profils adaptés selon vos besoins. Le profil est choisi avec vous selon votre besoin, votre équipe et votre organisation ; le cadre (statut, durée, rémunération) est défini directement avec vous.",
+  },
+  {
+    question: "Les ateliers existent-ils toujours ?",
+    answer:
+      "Oui. Le diagnostic salon et les ateliers de pratique encadrés par un barber professionnel restent disponibles en services complémentaires, pour votre équipe comme pour le profil qui la rejoint.",
   },
   {
     question: "Le portail de démonstration crée-t-il un vrai compte ?",
@@ -242,5 +281,5 @@ export const FAQ_ITEMS = [
 
 export const FOOTER = {
   copyright: "© 2026 Pléthore Réseaux. Tous droits réservés.",
-  tagline: "Ateliers pratiques barber, accompagnement salon et impact social.",
+  tagline: "Profils de coiffeurs pour salons, ateliers de pratique et impact social.",
 };

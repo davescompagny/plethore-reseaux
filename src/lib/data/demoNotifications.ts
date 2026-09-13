@@ -39,7 +39,7 @@ export const DEMO_NOTIFICATIONS: Record<ProfileKind, DemoNotification[]> = {
     {
       id: "n-debutant-1",
       title: "Demande acceptée",
-      body: "Votre demande de participation à l'atelier découverte a été acceptée.",
+      body: "Votre demande de participation à l'atelier de pratique a été acceptée.",
       createdAt: "2026-07-09T10:00:00.000Z",
       read: false,
     },

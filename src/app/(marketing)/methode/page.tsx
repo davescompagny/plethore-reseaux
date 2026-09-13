@@ -5,9 +5,9 @@ import { DiagnosticTeaserSection } from "@/components/marketing/DiagnosticTeaser
 import { FinalCtaSection } from "@/components/marketing/FinalCtaSection";
 
 export const metadata: Metadata = {
-  title: "Méthode — Diagnostic, atelier terrain, suivi",
+  title: "Méthode — Diagnostic, renfort de votre équipe, suivi",
   description:
-    "La méthode Pléthore Réseaux en trois étapes : diagnostic et recommandation, atelier terrain, suivi et amélioration continue.",
+    "La méthode Pléthore Réseaux en trois étapes : diagnostic et recommandation, renfort de votre équipe, suivi et amélioration continue.",
 };
 
 export default function MethodePage() {
@@ -16,7 +16,7 @@ export default function MethodePage() {
       <PageIntro
         eyebrow="Méthode"
         title="Un parcours simple pour éviter de perdre du temps."
-        description="Comprendre vite, tester proprement et construire une offre barber crédible dans votre salon."
+        description="Comprendre vite, renforcer votre équipe et construire une offre barber crédible dans votre salon."
       />
       <MethodSection />
       <DiagnosticTeaserSection />

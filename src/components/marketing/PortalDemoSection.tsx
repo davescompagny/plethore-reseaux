@@ -5,7 +5,7 @@ import { Eyebrow } from "@/components/ui/Tag";
 const FEATURES = [
   { icon: LayoutDashboard, label: "Un tableau de bord adapté à votre profil" },
   { icon: FileText, label: "Vos documents et recommandations centralisés" },
-  { icon: Users2, label: "Le suivi de vos demandes et ateliers" },
+  { icon: Users2, label: "Le suivi de vos demandes de profils et d'ateliers" },
   { icon: Bell, label: "Des notifications sur l'avancement de vos dossiers" },
 ];
 
