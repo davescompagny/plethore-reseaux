@@ -84,6 +84,7 @@ export type RequestStatus = "en_attente" | "acceptee" | "planifiee" | "terminee"
 export interface WorkshopRequest {
   id: string;
   profileKind: ProfileKind;
+  renfortId?: string;
   label: string;
   detail: string;
   status: RequestStatus;

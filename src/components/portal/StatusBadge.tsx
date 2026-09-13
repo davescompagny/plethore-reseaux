@@ -16,7 +16,7 @@ const WORKSHOP_LABELS: Record<string, string> = {
 const TONE: Record<string, string> = {
   en_attente: "bg-bronze-soft text-bronze-strong",
   acceptee: "bg-green-soft text-green",
-  planifiee: "bg-green-soft text-green",
+  planifiee: "bg-green text-white",
   terminee: "bg-surface-strong text-muted",
   a_venir: "bg-green-soft text-green",
   complet: "bg-bronze-soft text-bronze-strong",

@@ -196,7 +196,7 @@ export const IMPACT = {
 export const METHOD_STEPS = [
   {
     title: "Diagnostic et recommandation",
-    description: "On choisit le bon format : diagnostic seul ou atelier de pratique selon votre situation.",
+    description: "On choisit le bon format : un profil en renfort, un atelier de pratique, ou les deux, selon votre situation.",
   },
   {
     title: "Renfort de votre équipe",

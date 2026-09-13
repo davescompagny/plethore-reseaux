@@ -11,7 +11,7 @@ import { SkeletonCard } from "@/components/ui/Skeleton";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { StatusBadge } from "@/components/portal/StatusBadge";
 import { ProgressBar } from "@/components/ui/ProgressBar";
-import { formatDate } from "@/lib/utils";
+import { experienceLabel, formatDate } from "@/lib/utils";
 import type { DemoRenfort } from "@/lib/types";
 
 export default function AteliersPage() {
@@ -104,11 +104,6 @@ function RenfortsView() {
       )}
     </div>
   );
-}
-
-function experienceLabel(years: number) {
-  if (years === 0) return "Débutant";
-  return `${years} an${years > 1 ? "s" : ""} d'expérience`;
 }
 
 function RenfortCard({ renfort }: { renfort: DemoRenfort }) {

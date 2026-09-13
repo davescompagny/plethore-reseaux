@@ -12,3 +12,8 @@ export function formatDate(iso: string) {
     year: "numeric",
   }).format(new Date(iso));
 }
+
+export function experienceLabel(years: number) {
+  if (years === 0) return "Débutant";
+  return `${years} an${years > 1 ? "s" : ""} d'expérience`;
+}

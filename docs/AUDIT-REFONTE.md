@@ -311,6 +311,7 @@ Commandes exécutées le 2026-09-13 depuis `Website/` (Node v24.18.0) :
 - `src/lib/demo/constants.ts` : `DEMO_PROFILE_SESSION_KEY` — exporté, importé nulle part dans `src/` (seul `PORTAL_PROFILE_STORAGE_KEY` est utilisé, dans `demo/layout.tsx`) ; à vérifier dans les tests avant toute décision.
 - `docs/FRONTEND_ARCHITECTURE.md` §« Le sélecteur de profil de démonstration » — indique que `DemoProfileProvider` entoure `PortalPreview` sur l'accueil ; **inexact** : `PortalPreview` utilise un `useState` local. Documentation à corriger, pas du code.
 - `eslint.config.mjs` — la liste `globalIgnores` n'inclut pas `version-partage-old/` (cause de l'échec du lint).
+- `SOLUTIONS_PANEL` (`src/lib/site-content.ts:18-39`) — données mortes depuis le retrait de l'onglet « Solutions » (étape 2) : plus importé nulle part, non rendu ; contient encore « Atelier découverte / intensif » et les ancres `/offres#decouverte` / `/offres#intensif` qui ne pointent plus vers rien. À supprimer à l'étape 8 (constaté au contrôle qualité du 2026-09-13).
 - Git : 116 fichiers apparaissent modifiés, mais `git diff --shortstat` donne `0 insertions, 0 deletions` — ce sont uniquement des **changements de mode `100644 → 100755`** dus au disque externe exFAT (tous les fichiers y sont exécutables). Aucune modification de contenu non commitée.
 
 ## I. Questions ouvertes

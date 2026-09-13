@@ -1,15 +1,44 @@
-import type { ProfileKind, WorkshopRequest } from "@/lib/types";
+import type { DemoRenfort, ProfileKind, WorkshopRequest } from "@/lib/types";
+import { DEMO_RENFORTS } from "@/lib/data/demoRenforts";
+import { experienceLabel } from "@/lib/utils";
+
+function renfort(id: string): DemoRenfort {
+  const found = DEMO_RENFORTS.find((r) => r.id === id);
+  if (!found) throw new Error(`Profil de renfort inconnu : ${id}`);
+  return found;
+}
+
+function propositionLabel(renfortId: string) {
+  const r = renfort(renfortId);
+  return `Proposition de profil — ${r.prenom} ${r.initiale}.`;
+}
+
+function propositionDetail(renfortId: string) {
+  const r = renfort(renfortId);
+  return `${experienceLabel(r.experienceAnnees)} · ${r.statut} · ${r.zone}`;
+}
 
 export const DEMO_REQUESTS: Record<ProfileKind, WorkshopRequest[]> = {
   salon: [
     {
       id: "r-salon-1",
       profileKind: "salon",
-      label: "Atelier de pratique",
-      detail: "Demande envoyée pour 2 membres de l'équipe, session du 18 août à Créteil.",
+      renfortId: "rf-1",
+      label: propositionLabel("rf-1"),
+      detail: propositionDetail("rf-1"),
       status: "planifiee",
       createdAt: "2026-07-01T10:00:00.000Z",
       updatedAt: "2026-07-05T14:00:00.000Z",
+    },
+    {
+      id: "r-salon-3",
+      profileKind: "salon",
+      renfortId: "rf-2",
+      label: propositionLabel("rf-2"),
+      detail: propositionDetail("rf-2"),
+      status: "terminee",
+      createdAt: "2026-06-12T10:00:00.000Z",
+      updatedAt: "2026-06-12T10:00:00.000Z",
     },
     {
       id: "r-salon-2",
