@@ -13,7 +13,7 @@ export function DiagnosticTeaserSection() {
           </h2>
           <p className="mb-6 max-w-lg text-lg text-muted">
             Huit questions sur votre salon, votre équipe et votre clientèle suffisent pour obtenir une recommandation
-            indicative : bootcamp découverte ou bootcamp intensif. La recommandation finale est toujours confirmée
+            indicative : atelier découverte ou atelier intensif. La recommandation finale est toujours confirmée
             par Pléthore Réseaux.
           </p>
           <Link
@@ -40,7 +40,7 @@ export function DiagnosticTeaserSection() {
             </li>
           </ul>
           <p className="mt-4 rounded-lg bg-surface-strong px-4 py-3 text-sm font-bold text-ink">
-            Recommandation indicative : Bootcamp intensif 3 jours
+            Recommandation indicative : Atelier intensif
           </p>
         </div>
       </div>

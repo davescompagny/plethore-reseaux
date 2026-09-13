@@ -3,13 +3,13 @@
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { useState } from "react";
-import { MAIN_NAV, PROFILES_PANEL, SOLUTIONS_PANEL } from "@/lib/site-content";
+import { MAIN_NAV, PROFILES_PANEL } from "@/lib/site-content";
 import { ThemeToggle } from "./ThemeToggle";
 import { NavPanel } from "./NavPanel";
 import { MobileNav } from "./MobileNav";
 
 export function SiteHeader() {
-  const [openPanel, setOpenPanel] = useState<"solutions" | "profils" | null>(null);
+  const [openPanel, setOpenPanel] = useState<"profils" | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
@@ -22,13 +22,6 @@ export function SiteHeader() {
           </Link>
 
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Navigation principale">
-            <NavPanel
-              label="Solutions"
-              items={SOLUTIONS_PANEL}
-              open={openPanel === "solutions"}
-              onToggle={() => setOpenPanel(openPanel === "solutions" ? null : "solutions")}
-              onClose={() => setOpenPanel(null)}
-            />
             <NavPanel
               label="Pour qui ?"
               items={PROFILES_PANEL}

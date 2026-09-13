@@ -3,7 +3,7 @@ import type { Workshop } from "@/lib/types";
 export const DEMO_WORKSHOPS: Workshop[] = [
   {
     id: "w-1",
-    title: "Bootcamp intensif 3 jours — Skin fade & barbe",
+    title: "Atelier intensif — Skin fade & barbe",
     kind: "intensif",
     date: "2026-08-18",
     city: "Créteil",
@@ -13,7 +13,7 @@ export const DEMO_WORKSHOPS: Workshop[] = [
   },
   {
     id: "w-2",
-    title: "Bootcamp découverte 1 jour",
+    title: "Atelier découverte",
     kind: "decouverte",
     date: "2026-08-05",
     city: "Paris",

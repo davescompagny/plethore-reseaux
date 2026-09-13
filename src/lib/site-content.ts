@@ -22,12 +22,12 @@ export const SOLUTIONS_PANEL = [
     href: "/diagnostic",
   },
   {
-    title: "Bootcamp découverte 1 jour",
-    description: "Une journée terrain pour tester l'intérêt du salon et initier l'équipe.",
+    title: "Atelier découverte",
+    description: "Une session terrain pour tester l'intérêt du salon et initier l'équipe.",
     href: "/offres#decouverte",
   },
   {
-    title: "Bootcamp intensif 3 jours",
+    title: "Atelier intensif",
     description: "Le format principal pour structurer une offre homme crédible et vendable.",
     href: "/offres#intensif",
   },
@@ -111,9 +111,9 @@ export const OFFERS = [
   {
     id: "decouverte",
     tag: "Offre découverte",
-    title: "Bootcamp découverte 1 jour",
+    title: "Atelier découverte",
     description:
-      "Une journée terrain pour tester l'intérêt du salon, initier l'équipe et voir quelles prestations barber peuvent être ajoutées rapidement.",
+      "Une session terrain pour tester l'intérêt du salon, initier l'équipe et voir quelles prestations barber peuvent être ajoutées rapidement.",
     bullets: [
       "Démonstration et pratique encadrée",
       "Skin fade, taper fade, barbe",
@@ -124,7 +124,7 @@ export const OFFERS = [
   {
     id: "intensif",
     tag: "Offre principale",
-    title: "Bootcamp intensif 3 jours",
+    title: "Atelier intensif",
     description:
       "Le format principal pour faire monter l'équipe en compétence et construire une offre homme plus crédible, plus moderne et plus vendable.",
     bullets: [
@@ -162,10 +162,10 @@ export const IMPACT = {
 export const METHOD_STEPS = [
   {
     title: "Diagnostic et recommandation",
-    description: "On choisit le bon format : diagnostic seul, bootcamp découverte ou bootcamp intensif selon votre situation.",
+    description: "On choisit le bon format : diagnostic seul, atelier découverte ou atelier intensif selon votre situation.",
   },
   {
-    title: "Bootcamp terrain",
+    title: "Atelier terrain",
     description:
       "Un barber professionnel encadre la pratique, les gestes, l'hygiène, la posture client et les prestations prioritaires. Envoyez votre coiffeur ou votre équipe dans nos ateliers de pratique.",
   },
@@ -216,7 +216,7 @@ export const FAQ_ITEMS = [
   {
     question: "Faut-il recruter un barber à temps plein ?",
     answer:
-      "Non, ce n'est pas nécessaire pour démarrer. Le diagnostic et les bootcamps permettent à votre équipe actuelle de monter en compétence sur les prestations barber, avant d'envisager un recrutement si besoin.",
+      "Non, ce n'est pas nécessaire pour démarrer. Le diagnostic et les ateliers permettent à votre équipe actuelle de monter en compétence sur les prestations barber, avant d'envisager un recrutement si besoin.",
   },
   {
     question: "Quels résultats commerciaux sont garantis ?",
@@ -224,9 +224,9 @@ export const FAQ_ITEMS = [
       "Aucun résultat commercial n'est garanti. L'accompagnement dépend du contexte du salon, de l'équipe et de l'exécution. Nous construisons un plan crédible, pas une promesse.",
   },
   {
-    question: "Quelle est la différence entre le bootcamp découverte et le bootcamp intensif ?",
+    question: "Quelle est la différence entre l'atelier découverte et l'atelier intensif ?",
     answer:
-      "Le bootcamp découverte est une journée pour tester l'intérêt du salon et initier l'équipe. Le bootcamp intensif (3 jours) est le format principal pour structurer une vraie offre barber avec une pratique plus poussée.",
+      "L'atelier découverte permet de tester l'intérêt du salon et d'initier l'équipe. L'atelier intensif est le format principal pour structurer une vraie offre barber avec une pratique plus poussée.",
   },
   {
     question: "Le portail de démonstration crée-t-il un vrai compte ?",

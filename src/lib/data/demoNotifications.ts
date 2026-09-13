@@ -4,7 +4,7 @@ export const DEMO_NOTIFICATIONS: Record<ProfileKind, DemoNotification[]> = {
   salon: [
     {
       id: "n-salon-1",
-      title: "Bootcamp confirmé",
+      title: "Atelier confirmé",
       body: "Votre session du 18 août à Créteil est confirmée pour 2 personnes.",
       createdAt: "2026-07-05T14:00:00.000Z",
       read: false,
@@ -39,7 +39,7 @@ export const DEMO_NOTIFICATIONS: Record<ProfileKind, DemoNotification[]> = {
     {
       id: "n-debutant-1",
       title: "Demande acceptée",
-      body: "Votre demande de participation au bootcamp découverte a été acceptée.",
+      body: "Votre demande de participation à l'atelier découverte a été acceptée.",
       createdAt: "2026-07-09T10:00:00.000Z",
       read: false,
     },

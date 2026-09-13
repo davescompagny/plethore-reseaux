@@ -19,10 +19,10 @@ const KINDS: { kind: ProfileKind; label: string }[] = [
 ];
 
 const NEXT_STEPS: Record<ProfileKind, string[]> = {
-  salon: ["Confirmer les 2 places au bootcamp du 18 août", "Lister les prestations à ajouter au menu"],
+  salon: ["Confirmer les 2 places à l'atelier du 18 août", "Lister les prestations à ajouter au menu"],
   structure: ["Recevoir la proposition de date d'atelier", "Confirmer le nombre de participants"],
   barber: ["Répondre à la proposition de mission", "Compléter le profil et les disponibilités"],
-  debutant: ["Confirmer la place au bootcamp découverte", "Préparer les questions d'orientation métier"],
+  debutant: ["Confirmer la place à l'atelier découverte", "Préparer les questions d'orientation métier"],
 };
 
 function progressFor(kind: ProfileKind): number | null {

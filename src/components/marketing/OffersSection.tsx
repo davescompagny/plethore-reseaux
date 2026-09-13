@@ -15,8 +15,8 @@ export function OffersSection() {
             </h2>
           </div>
           <p className="text-lg text-white/72">
-            Le parcours reste volontairement simple : on clarifie le besoin, on teste une journée sur le terrain,
-            puis on passe au bootcamp intensif si le salon veut structurer une vraie offre barber.
+            Le parcours reste volontairement simple : on clarifie le besoin, on teste sur le terrain,
+            puis on passe à l'atelier intensif si le salon veut structurer une vraie offre barber.
           </p>
         </div>
         <div className="grid gap-4.5 md:grid-cols-3">

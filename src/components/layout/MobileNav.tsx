@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { X } from "lucide-react";
 import { useEffect } from "react";
-import { MAIN_NAV, PROFILES_PANEL, SOLUTIONS_PANEL } from "@/lib/site-content";
+import { MAIN_NAV, PROFILES_PANEL } from "@/lib/site-content";
 
 export function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
   useEffect(() => {
@@ -31,7 +31,6 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
         </button>
       </div>
       <nav className="flex-1 overflow-y-auto px-5 py-6">
-        <MobileGroup title="Solutions" items={SOLUTIONS_PANEL} onNavigate={onClose} />
         <MobileGroup title="Pour qui ?" items={PROFILES_PANEL} onNavigate={onClose} />
         <ul className="mt-2 grid gap-1 border-t border-line pt-4">
           {MAIN_NAV.map((item) => (

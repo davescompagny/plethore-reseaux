@@ -257,7 +257,7 @@ export function DiagnosticWizard() {
         ) : null}
 
         {step === 6 ? (
-          <FieldGroup label="Quelle est votre disponibilité pour un bootcamp ?" error={errors.availability?.message}>
+          <FieldGroup label="Quelle est votre disponibilité pour un atelier ?" error={errors.availability?.message}>
             <Controller
               name="availability"
               control={control}

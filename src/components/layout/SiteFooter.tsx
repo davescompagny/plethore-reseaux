@@ -3,15 +3,6 @@ import { CONTACT, FOOTER } from "@/lib/site-content";
 
 const columns = [
   {
-    title: "Solutions",
-    links: [
-      { label: "Diagnostic salon", href: "/diagnostic" },
-      { label: "Offres", href: "/offres" },
-      { label: "Méthode", href: "/methode" },
-      { label: "Impact social", href: "/impact" },
-    ],
-  },
-  {
     title: "Pour qui ?",
     links: [
       { label: "Salons", href: "/profils/salons" },
@@ -41,7 +32,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-line bg-surface">
       <div className="mx-auto max-w-[1160px] px-5 py-14">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_repeat(4,1fr)]">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_repeat(3,1fr)]">
           <div>
             <Link href="/" className="focus-ring mb-3 flex w-fit items-center gap-2.5 font-black">
               <span className="grid size-9 place-items-center rounded-lg bg-green font-black text-white">P</span>

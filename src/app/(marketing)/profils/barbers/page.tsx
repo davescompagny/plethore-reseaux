@@ -7,12 +7,12 @@ import { FinalCtaSection } from "@/components/marketing/FinalCtaSection";
 
 export const metadata: Metadata = {
   title: "Pour les barbers et partenaires",
-  description: "Barbers professionnels et partenaires terrain : rejoignez le réseau Pléthore Réseaux pour encadrer des ateliers et des bootcamps.",
+  description: "Barbers professionnels et partenaires terrain : rejoignez le réseau Pléthore Réseaux pour encadrer des ateliers.",
 };
 
 const STEPS = [
   "Un profil avec vos spécialités, votre zone d'intervention et vos disponibilités",
-  "Des propositions de mission sur des bootcamps et ateliers",
+  "Des propositions de mission sur des ateliers",
   "Un cadre d'intervention clair avec les salons et structures partenaires",
   "Aucune promesse de volume d'activité garanti",
 ];
@@ -23,7 +23,7 @@ export default function BarbersPage() {
       <PageIntro
         eyebrow="Barbers et partenaires"
         title="Rejoignez un réseau terrain, pas une plateforme anonyme."
-        description="Vous êtes barber professionnel, indépendant ou en montée en compétence, et vous souhaitez intervenir sur des bootcamps et ateliers Pléthore Réseaux."
+        description="Vous êtes barber professionnel, indépendant ou en montée en compétence, et vous souhaitez intervenir sur des ateliers Pléthore Réseaux."
       />
       <section className="py-20 sm:py-24">
         <div className="mx-auto grid max-w-[1160px] gap-10 px-5 lg:grid-cols-2 lg:gap-14">

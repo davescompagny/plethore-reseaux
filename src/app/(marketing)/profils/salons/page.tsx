@@ -7,12 +7,12 @@ import { FinalCtaSection } from "@/components/marketing/FinalCtaSection";
 
 export const metadata: Metadata = {
   title: "Pour les salons de coiffure",
-  description: "Salons de coiffure et professionnels : diagnostic, bootcamps et suivi pour structurer votre offre barber.",
+  description: "Salons de coiffure et professionnels : diagnostic, ateliers et suivi pour structurer votre offre barber.",
 };
 
 const STEPS = [
   "Un diagnostic court de votre offre homme actuelle",
-  "Une recommandation entre bootcamp découverte et bootcamp intensif",
+  "Une recommandation entre atelier découverte et atelier intensif",
   "Une pratique encadrée par un barber professionnel",
   "Un suivi terrain : réseaux sociaux, profils de barbers, pratique sur modèles",
 ];

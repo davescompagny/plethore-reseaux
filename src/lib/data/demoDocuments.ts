@@ -10,7 +10,7 @@ export const DEMO_DOCUMENTS: Record<ProfileKind, DemoDocument[]> = {
     },
     {
       id: "doc-salon-2",
-      title: "Support bootcamp intensif — techniques prioritaires",
+      title: "Support atelier intensif — techniques prioritaires",
       kind: "support",
       createdAt: "2026-07-05T09:00:00.000Z",
     },

@@ -55,7 +55,7 @@ export function BeginnerDashboard() {
               ))}
             </ul>
           ) : (
-            "Aucun bootcamp découverte disponible pour l'instant."
+            "Aucun atelier découverte disponible pour l'instant."
           )}
         </InfoCard>
         <InfoCard icon={Lightbulb} title="Conseil">

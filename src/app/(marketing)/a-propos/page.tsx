@@ -23,7 +23,7 @@ export default function AProposPage() {
             <p>
               Nous partons du principe que la demande barber existe déjà chez la plupart des salons indépendants.
               Notre rôle est de clarifier le potentiel réel du salon (diagnostic), de faire monter l&apos;équipe en
-              compétence sur le terrain (bootcamps) et d&apos;assurer un suivi concret (réseaux sociaux, profils de
+              compétence sur le terrain (ateliers) et d&apos;assurer un suivi concret (réseaux sociaux, profils de
               barbers, pratique sur modèles).
             </p>
           </Card>

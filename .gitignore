@@ -48,3 +48,9 @@ next-env.d.ts
 
 # generated offline snapshot for local double-click viewing (not source code)
 /version-partage/
+
+# AppleDouble files created by macOS on exFAT/network volumes
+._*
+
+# old broken offline export attempt (kept locally until cleanup)
+/version-partage-old/

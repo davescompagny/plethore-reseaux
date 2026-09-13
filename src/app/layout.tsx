@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s — Pléthore Réseaux",
   },
   description:
-    "Pléthore Réseaux aide les salons de coiffure indépendants à capter la demande barber moderne grâce au diagnostic salon, au bootcamp découverte 1 jour, au bootcamp intensif 3 jours et aux options de suivi.",
+    "Pléthore Réseaux aide les salons de coiffure indépendants à capter la demande barber moderne grâce au diagnostic salon, à l'atelier découverte, à l'atelier intensif et aux options de suivi.",
 };
 
 const themeInitScript = `

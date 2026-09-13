@@ -5,9 +5,9 @@ import { DiagnosticTeaserSection } from "@/components/marketing/DiagnosticTeaser
 import { FinalCtaSection } from "@/components/marketing/FinalCtaSection";
 
 export const metadata: Metadata = {
-  title: "Méthode — Diagnostic, bootcamp terrain, suivi",
+  title: "Méthode — Diagnostic, atelier terrain, suivi",
   description:
-    "La méthode Pléthore Réseaux en trois étapes : diagnostic et recommandation, bootcamp terrain, suivi et amélioration continue.",
+    "La méthode Pléthore Réseaux en trois étapes : diagnostic et recommandation, atelier terrain, suivi et amélioration continue.",
 };
 
 export default function MethodePage() {

@@ -45,18 +45,18 @@ export function computeDiagnosticResult(answers: DiagnosticAnswers): DiagnosticR
   let recommendationLabel: string;
   if (maturity === "avance") {
     recommendation = "intensif";
-    recommendationLabel = "Bootcamp intensif 3 jours";
+    recommendationLabel = "Atelier intensif";
   } else if (maturity === "en_progression") {
     if (answers.difficulties.length > 2) {
       recommendation = "decouverte";
-      recommendationLabel = "Bootcamp découverte 1 jour";
+      recommendationLabel = "Atelier découverte";
     } else {
       recommendation = "intensif";
-      recommendationLabel = "Bootcamp intensif 3 jours";
+      recommendationLabel = "Atelier intensif";
     }
   } else {
     recommendation = "decouverte";
-    recommendationLabel = "Bootcamp découverte 1 jour";
+    recommendationLabel = "Atelier découverte";
   }
 
   return {
