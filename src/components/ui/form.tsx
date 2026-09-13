@@ -1,4 +1,4 @@
-import type { InputHTMLAttributes, ReactNode, SelectHTMLAttributes, TextareaHTMLAttributes } from "react";
+import type { InputHTMLAttributes, ReactNode, TextareaHTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
 
 export function Field({
@@ -58,23 +58,6 @@ export function Textarea({
       aria-invalid={invalid || undefined}
       {...props}
     />
-  );
-}
-
-export function Select({
-  className,
-  invalid,
-  children,
-  ...props
-}: SelectHTMLAttributes<HTMLSelectElement> & { invalid?: boolean }) {
-  return (
-    <select
-      className={cn(controlBase, invalid ? "border-red-400" : "border-line", className)}
-      aria-invalid={invalid || undefined}
-      {...props}
-    >
-      {children}
-    </select>
   );
 }
 

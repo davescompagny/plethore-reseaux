@@ -38,8 +38,6 @@ export const accountStepSchema = z
 
 export type AccountStepValues = z.infer<typeof accountStepSchema>;
 
-export const profileKindSchema = z.enum(["salon", "structure", "barber", "debutant"]);
-
 export const salonDetailsSchema = z.object({
   salonName: z.string().trim().min(2, "Nom du salon requis."),
   city: z.string().trim().min(2, "Ville requise."),

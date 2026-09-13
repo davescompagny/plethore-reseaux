@@ -57,3 +57,10 @@ next-env.d.ts
 
 # screenshots de contrôle générés par Playwright
 /captures-controle/
+
+# quarantaine de nettoyage (étape 9) — hors git, à supprimer définitivement par le propriétaire
+/_quarantaine/
+
+# HTML historiques d'avant la migration et dossier vide résiduel
+/legacy/
+/image website/

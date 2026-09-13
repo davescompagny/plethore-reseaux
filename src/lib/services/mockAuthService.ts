@@ -8,7 +8,7 @@ import type { DemoUser, ProfileKind } from "@/lib/types";
  * pour que l'UI (loading / succès / erreur) soit déjà prête pour Supabase.
  */
 
-export interface SignUpInput {
+interface SignUpInput {
   firstName: string;
   lastName: string;
   email: string;

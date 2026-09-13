@@ -33,6 +33,54 @@ Pas de script `preview`, `export`, `format` ni `e2e`.
 
 ## B. Arborescence et versions
 
+> **Mise à jour du 2026-09-14 (étape 9 — quarantaine de nettoyage).** L'arborescence ci-dessous est l'état **après** nettoyage. L'état d'origine (13 septembre, avant refonte) est conservé plus bas sous « Historique ».
+
+**Arborescence sur 2 niveaux** (hors `node_modules/`, `.next/`, `out/`, `.git/`, `_quarantaine/`) :
+
+```
+Website/
+├── .claude/settings.local.json     (permissions Claude Code + MCP "playwright", ignoré par git)
+├── .gitignore                      (+ /_quarantaine/, /legacy/, /image website/, /captures-controle/, ._*, /version-partage-old/)
+├── AGENTS.md                       (avertissement Next.js 16, importé par CLAUDE.md)
+├── CLAUDE.md                       (règles du projet)
+├── README.md
+├── docs/
+│   ├── AUDIT-REFONTE.md
+│   ├── BACKEND_HANDOFF.md
+│   ├── FRONTEND_ARCHITECTURE.md
+│   └── NETTOYAGE.md                (inventaire + colonne VALIDATION remplie)
+├── eslint.config.mjs
+├── next.config.ts                  (inchangé, vide)
+├── next-env.d.ts                   (généré, ignoré)
+├── package.json / package-lock.json (dépendance `motion` retirée)
+├── postcss.config.mjs
+├── tsconfig.json
+├── vitest.config.ts / vitest.setup.ts
+├── src/
+│   ├── app/                        (routes : (marketing), (auth), demo, layout, globals.css, sitemap, robots)
+│   ├── components/                 (forms, layout, marketing, portal, ui)
+│   ├── hooks/                      (useAsync, useDismiss)
+│   └── lib/                        (data, demo, services, site-content, types, utils, validations)
+├── captures-controle/              (captures Playwright de contrôle, ignoré par git)
+├── version-partage/                (export statique SERVI sur 127.0.0.1:8899 + démarrer-le-site.command + LISEZ-MOI.txt, ignoré)
+├── version-partage-old/            (ne contient plus que `.nojekyll`, laissé en place sur décision)
+└── _quarantaine/                   (ignoré par git — voir _quarantaine/RESTAURER.md)
+    ├── RESTAURER.md
+    ├── index-8.html, barber.html, index-7.html, plethore-reseaux-complet-4.html (+ .zip)
+    ├── legacy/index-8.html, legacy/other-versions/
+    ├── out/, public/, image website/
+    └── version-partage-old/ (LISEZ-MOI.txt, démarrer-le-site.command, out-fixed/)
+```
+
+Disparus définitivement (régénérables) : `.next/` (cache), `tsconfig.tsbuildinfo`, `.DS_Store`, fichiers AppleDouble `._*`. `out/` est recréé à chaque régénération de l'export puis peut être supprimé.
+
+**Dossier réellement servi** : `version-partage/` (voir A). Il est régénéré à chaque étape ; c'est la version la plus récente du site (build ID lisible dans `version-partage/_next/static/`).
+
+**Autres versions du site** : toutes déplacées dans `_quarantaine/` le 2026-09-14 (aucune n'était plus récente que la version servie — vérifié dans `docs/NETTOYAGE.md`). Leur suppression définitive appartient au propriétaire du projet.
+
+<details>
+<summary>Historique — état d'origine relevé le 2026-09-13, avant refonte</summary>
+
 **Arborescence sur 2 niveaux** (hors `node_modules/`, `.next/`, `out/`, `.git/`, fichiers `.DS_Store` / `._*`) :
 
 ```
@@ -96,6 +144,8 @@ Website/
 **Version la plus récente** : `version-partage/` et `version-partage-old/` portent la même date de modification de dossier (2026-08-18 18:05), mais le script de lancement de `version-partage/` (13 août 00:59) est plus récent que celui de `version-partage-old/` (12 août 19:41), et son build ID correspond à `.next/BUILD_ID`. **C'est bien `version-partage/` qui est servie.** Parmi les HTML historiques, le plus récent est `index-8.html` (20 juillet 2026) ; aucun HTML historique n'est utilisé par l'application.
 
 **Snapshot figé** : `version-partage/` contient les mêmes textes que le code source au moment du build (donc les occurrences de la section C). Toute modification de `src/` devra être suivie d'une régénération (procédure dans `version-partage/LISEZ-MOI.txt`) pour être visible sur `127.0.0.1:8899`.
+
+</details>
 
 ## C. Occurrences à traiter
 

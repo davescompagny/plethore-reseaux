@@ -42,7 +42,7 @@ export const DEMO_USERS: Record<ProfileKind, DemoUser> = {
   },
 };
 
-export const DEMO_SALON_PROFILE: SalonProfile = {
+const DEMO_SALON_PROFILE: SalonProfile = {
   kind: "salon",
   salonName: "Salon Karine Coiffure",
   city: "Créteil",
@@ -53,7 +53,7 @@ export const DEMO_SALON_PROFILE: SalonProfile = {
   diagnosticProgress: 60,
 };
 
-export const DEMO_STRUCTURE_PROFILE: StructureProfile = {
+const DEMO_STRUCTURE_PROFILE: StructureProfile = {
   kind: "structure",
   structureName: "Maison de quartier Belleville",
   structureType: "Association d'insertion socio-professionnelle",
@@ -63,7 +63,7 @@ export const DEMO_STRUCTURE_PROFILE: StructureProfile = {
   workshopWanted: "Atelier image de soi + initiation coupe encadrée par un barber",
 };
 
-export const DEMO_BARBER_PROFILE: BarberProfile = {
+const DEMO_BARBER_PROFILE: BarberProfile = {
   kind: "barber",
   status: "Indépendant",
   experienceYears: 5,
@@ -74,7 +74,7 @@ export const DEMO_BARBER_PROFILE: BarberProfile = {
   profileCompletion: 45,
 };
 
-export const DEMO_BEGINNER_PROFILE: BeginnerProfile = {
+const DEMO_BEGINNER_PROFILE: BeginnerProfile = {
   kind: "debutant",
   city: "Montreuil",
   level: "Grand débutant",

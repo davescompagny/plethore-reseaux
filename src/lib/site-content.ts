@@ -1,5 +1,3 @@
-export const BRAND = "Pléthore Réseaux";
-
 export const CONTACT = {
   email: "daves.compagny@gmail.com",
   phone: "07 66 22 01 81",
@@ -13,29 +11,6 @@ export const MAIN_NAV = [
   { label: "Impact", href: "/impact" },
   { label: "Méthode", href: "/methode" },
   { label: "FAQ", href: "/faq" },
-];
-
-export const SOLUTIONS_PANEL = [
-  {
-    title: "Diagnostic salon",
-    description: "Un point court pour identifier vos opportunités barber et le bon format d'accompagnement.",
-    href: "/diagnostic",
-  },
-  {
-    title: "Atelier découverte",
-    description: "Une session terrain pour tester l'intérêt du salon et initier l'équipe.",
-    href: "/offres#decouverte",
-  },
-  {
-    title: "Atelier intensif",
-    description: "Le format principal pour structurer une offre homme crédible et vendable.",
-    href: "/offres#intensif",
-  },
-  {
-    title: "Suivi terrain",
-    description: "Profils de barbers, boost réseaux sociaux, pratique sur modèles.",
-    href: "/methode",
-  },
 ];
 
 export const PROFILES_PANEL = [

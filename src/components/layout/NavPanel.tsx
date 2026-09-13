@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { useDismiss } from "@/hooks/useDismiss";
 
-export interface NavPanelItem {
+interface NavPanelItem {
   title: string;
   description: string;
   href: string;
