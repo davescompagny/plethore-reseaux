@@ -6,8 +6,9 @@ import { useAsync } from "@/hooks/useAsync";
 import { getProfile } from "@/lib/services/mockProfileService";
 import { listWorkshops } from "@/lib/services/mockWorkshopService";
 import { ProgressBar } from "@/components/ui/ProgressBar";
-import { Button } from "@/components/ui/Button";
+import { Button, LinkButton } from "@/components/ui/Button";
 import { InfoCard } from "@/components/portal/InfoCard";
+import { PortfolioPreviewCard } from "@/components/portal/PortfolioPreviewCard";
 import { NewRequestModal } from "@/components/portal/NewRequestModal";
 import { SkeletonCard } from "@/components/ui/Skeleton";
 import { formatDate } from "@/lib/utils";
@@ -62,6 +63,14 @@ export function BeginnerDashboard() {
           {profile.supportWanted}
         </InfoCard>
       </div>
+
+      <PortfolioPreviewCard
+        action={
+          <LinkButton href="/demo/espace/profil" className="w-fit">
+            Ajouter mon portfolio
+          </LinkButton>
+        }
+      />
 
       <Button className="w-fit" onClick={() => setModalOpen(true)}>
         Demander à participer

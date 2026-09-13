@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { Briefcase, MapPin, Sparkles, Image as ImageIcon } from "lucide-react";
+import { Briefcase, MapPin, Sparkles } from "lucide-react";
 import { useAsync } from "@/hooks/useAsync";
 import { getProfile } from "@/lib/services/mockProfileService";
 import { listRequests } from "@/lib/services/mockRequestService";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { InfoCard } from "@/components/portal/InfoCard";
+import { PortfolioPreviewCard } from "@/components/portal/PortfolioPreviewCard";
 import { DemoBadge } from "@/components/ui/Tag";
 import { SkeletonCard } from "@/components/ui/Skeleton";
 import type { BarberProfile } from "@/lib/types";
@@ -56,15 +57,7 @@ export function BarberDashboard() {
         </InfoCard>
       </div>
 
-      <InfoCard icon={ImageIcon} title="Aperçu du portfolio">
-        {profile.portfolioUrl ? (
-          <a href={profile.portfolioUrl} className="font-semibold text-bronze hover:underline" target="_blank" rel="noopener noreferrer">
-            {profile.portfolioUrl}
-          </a>
-        ) : (
-          "Aucun portfolio renseigné pour le moment."
-        )}
-      </InfoCard>
+      <PortfolioPreviewCard portfolioUrl={profile.portfolioUrl} />
 
       <div>
         <div className="mb-2 flex items-center gap-2">
